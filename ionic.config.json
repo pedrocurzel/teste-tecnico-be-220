@@ -1,0 +1,7 @@
+{
+  "name": "teste técnico be220",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

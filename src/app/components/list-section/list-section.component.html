@@ -1,0 +1,32 @@
+<div class="section">
+  <div class="section-title">
+    <h3>{{sectionLabel}}</h3>
+    <div *ngIf="isTreinos" class="flex-center add-personal ion-activatable circle" (click)="createTreino()">
+      <ion-ripple-effect style="border-radius: 50%;"></ion-ripple-effect>
+      <ion-icon name="add"></ion-icon>
+    </div>
+    <div *ngIf="!isTreinos" class="novo-programa">
+      <p>NOVO</p>
+    </div>
+  </div>
+  <div class="scrolling-wrapper-flexbox" *ngIf="!isLoading">
+    <div *ngIf="isTreinos" class="card" (click)="createTreino()">
+      <div class="flex-center overlay ion-activatable circle">
+        <ion-ripple-effect style="border-radius: 25px !important;"></ion-ripple-effect>
+        <div class="flex-center add-personal" style="border: 1px solid white; color: white;">
+          <ion-icon name="add"></ion-icon>
+        </div>
+        <div style="max-width: 80px; ">
+          <h6>{{buttonLabel}}</h6>
+        </div>
+      </div>
+    </div>
+    <div  *ngFor="let treino of itens; let i = index;" class="card"  style="padding: 15px;" [style.background-image]="'url(' + treino['imageUrl'] + ')'">
+      <p *ngIf="!isTreinos && i == 0" class="incentivo">CONTINUAR TREINANDO</p>
+      <p>{{setStringToUpperCase(treino['nome'])}}</p>
+    </div>
+  </div>
+  <div *ngIf="isLoading">
+    <ion-spinner style="--color: white;"></ion-spinner>
+  </div>
+</div>

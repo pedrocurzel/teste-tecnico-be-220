@@ -1,0 +1,6 @@
+<div class="notification" [ngClass]="{'ion-activatable circle': !isLoading}">
+  <ion-ripple-effect style="border-radius: 50%;"></ion-ripple-effect>
+  <ion-icon *ngIf="!isLoading" name="notifications"></ion-icon>
+  <div *ngIf="!isLoading && hasUnreadNotifications" class="has-unread-notification"></div>
+  <ion-spinner *ngIf="isLoading" style="width: 30px; height: 30px; --color: white;" ></ion-spinner>
+</div>

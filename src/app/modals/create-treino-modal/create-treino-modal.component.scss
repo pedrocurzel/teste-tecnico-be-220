@@ -1,0 +1,22 @@
+.form {
+    padding: 16px;
+    background-color: var(--be220-primary);
+}
+h1 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.criar-button {
+    --background: black;
+    --color: var(--be220-default-orange);
+}
+
+ion-input {
+    --highlight-color-focused: var(--be220-default-orange);
+    --background: black;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --border-radius: 10px 10px 0 0;
+    --color: var(--be220-default-orange);
+}

@@ -1,0 +1,12 @@
+<div class="form">
+  <h1>Criar treino</h1>
+  <form [formGroup]="form" (submit)="criarTreino()">
+    <ion-input label="Nome" labelPlacement="stacked" type="text" formControlName="nome" placeholder="Digite o nome do treino"></ion-input>
+    <div *ngIf="form.invalid && form.controls.nome.errors">
+      <p style="color: red; font-size: 12px;">{{showErrors(form.controls.nome.errors)}}</p>
+    </div>
+    <div style="text-align: end; margin-top: 15px;">
+      <ion-button type="submit" class="criar-button" [disabled]="!form.valid">Criar</ion-button>
+    </div>
+  </form>
+</div>

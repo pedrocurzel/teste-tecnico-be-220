@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-menu-button style="--color: white;"></ion-menu-button>
+      </ion-col>
+      <ion-col>
+        <div class="flex-div center-div">
+          <img src="../../assets/logo.svg" style="filter: invert(100%);" />
+        </div>
+      </ion-col>
+      <ion-col size="2">
+        <div class="flex-div center-div">
+          <app-notification></app-notification>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <div class="flex-div align-right-div">
+          <img src="../../assets/profile.svg" />
+        </div>
+      </ion-col>
+      <ion-col size="8">
+        <div class="flex-div flex-column">
+          <h4>{{currentUser?.nome}}</h4>
+          <p *ngIf="currentUser" [class]="colorLevels[currentUser!.nivel]" >Nível {{capitalizeLevel(currentUser!.nivel)}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div class="flex-div center-div">
+          <ion-card class="options">
+            <div style="display: flex; flex-direction: row; height: 100%;">
+              <div class="ion-activatable ripple-parent rectangle flex center-div buttons ">
+                <ion-ripple-effect></ion-ripple-effect>
+                <div class="flex center-div rounded-border-icon">
+                  <ion-icon name="body"></ion-icon>
+                </div>
+                <p>MEU CORPO</p>
+              </div>
+              <div class="ion-activatable ripple-parent rectangle flex center-div buttons">
+                <ion-ripple-effect></ion-ripple-effect>
+                <div class="flex center-div rounded-border-icon">
+                  <ion-icon name="trophy"></ion-icon>
+                </div>
+                <p>OBJETIVOS E CONQUISTAS</p>
+              </div>
+            </div>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
