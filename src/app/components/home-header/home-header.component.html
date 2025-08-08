@@ -21,7 +21,7 @@
           <img src="../../assets/profile.svg" />
         </div>
       </ion-col>
-      <ion-col size="8">
+      <ion-col size="8" class="transition">
         <div class="flex-div flex-column">
           <h4>{{currentUser?.nome}}</h4>
           <p *ngIf="currentUser" [class]="colorLevels[currentUser!.nivel]" >Nível {{capitalizeLevel(currentUser!.nivel)}}</p>
